@@ -1,0 +1,32 @@
+@use "../../scss/" as *;
+
+.footer {
+  position: relative;
+  padding: 6rem 2rem;
+
+  &__content {
+    max-width: 1000px;
+
+    &__logo {
+      @include flex(center, center);
+      margin-bottom: 3rem;
+    }
+
+    &__menus {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    &__menu {
+      margin-top: 1rem;
+
+      font-size: 1.5rem;
+      font-weight: 600;
+
+      & > * ~ * {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
