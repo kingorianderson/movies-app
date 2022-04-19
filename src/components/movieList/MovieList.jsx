@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Button from "../button/Button";
 import tmdbApi, { category } from "../../api/tmdbApi";
 import apiConfig from "../../api/apiConfig";
+import ModalCard from "../movieCard/ModalCard";
 
 const MovieList = (props) => {
   const [items, setItems] = useState([]);
@@ -35,7 +36,7 @@ const MovieList = (props) => {
       <Swiper grabCursor={true} spaceBetween={10} slidesPerView={"auto"}>
         {items.map((item, i) => (
           <SwiperSlide key={i}>
-            <img src={apiConfig.w500Image(item.poster_path)} alt="" />
+            <ModalCard item={item} category={props.category} />
           </SwiperSlide>
         ))}
       </Swiper>
