@@ -40,9 +40,33 @@ const ModalGrid = (props) => {
     getList();
   }, [props.category, keyword]);
 
-  const loadMore = () => {
-    console.log("loadmore");
+  const loadMore = async () => {
+    let response = null;
+
+    if (keyword === undefined) {
+      const params = {
+        page: page + 1,
+      };
+      switch (props.category) {
+        case category.movie:
+          response = await tmdbApi.getMoviesList(movieType.upcoming, {
+            params,
+          });
+          break;
+        default:
+          response = await tmdbApi.getTvList(tvType.popular, { params });
+      }
+    } else {
+      const params = {
+        page: page + 1,
+        query: keyword,
+      };
+      response = await tmdbApi.search(props.category, { params });
+    }
+    setItems([...items, ...response.results]);
+    setPage(page + 1);
   };
+
   return (
     <>
       <div className="movie-grid">
