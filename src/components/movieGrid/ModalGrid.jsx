@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import MovieCard from "../movieCard/ModalCard";
 import tmdbApi, { category, movieType, tvType } from "../../api/tmdbApi";
+import { OutlineButton } from "../button/Button";
 
 const ModalGrid = (props) => {
   const [items, setItems] = useState([]);
@@ -38,12 +39,25 @@ const ModalGrid = (props) => {
     };
     getList();
   }, [props.category, keyword]);
+
+  const loadMore = () => {
+    console.log("loadmore");
+  };
   return (
-    <div className="movie-grid">
-      {items.map((item, i) => (
-        <MovieCard category={props.category} item={item} key={i} />
-      ))}
-    </div>
+    <>
+      <div className="movie-grid">
+        {items.map((item, i) => (
+          <MovieCard category={props.category} item={item} key={i} />
+        ))}
+      </div>
+      {page < totalPage ? (
+        <div className="movie-grid__loadmore">
+          <OutlineButton className="small" onClick={loadMore}>
+            Load more
+          </OutlineButton>
+        </div>
+      ) : null}
+    </>
   );
 };
 
