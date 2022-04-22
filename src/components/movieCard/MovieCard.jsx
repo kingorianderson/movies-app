@@ -1,4 +1,4 @@
-import "./modalCard.scss";
+import "./movieCard.scss";
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../button/Button";
