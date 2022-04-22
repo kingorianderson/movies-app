@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import PageHeader from "../components/pageHeader/PageHeader";
 import { category as cate } from "../api/tmdbApi";
-import MovieGrid from "../components/movieGrid/ModalGrid";
+import MovieGrid from "../components/movieGrid/MovieGrid";
 
 const Catalog = () => {
   const { category } = useParams();
