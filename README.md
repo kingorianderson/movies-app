@@ -1,7 +1,6 @@
-# API
+## API
 
- API: https://www.themoviedb.org/
-
+    API: https://www.themoviedb.org/
 
 # Getting Started with Create React App
 
