@@ -1,8 +1,17 @@
+<img align="center" src="./src/assets/logo.png" />
+
+  <h2 align="center">Responsive React Movies App With API.</h2>
+
+<a href="https://uhdmovies.netlify.app/"><strong>➥ Live Demo</strong></a>
+<br />
+
 ## API
 
-    API: https://www.themoviedb.org/
+[themoviedb](https://www.themoviedb.org/).
 
-# Getting Started with Create React App
+<br />
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
