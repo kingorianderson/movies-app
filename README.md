@@ -1,13 +1,16 @@
-<img align="center" src="./src/assets/logo.png" />
+<p align="center">
+<img width="100px" src="./src/assets/logo.png" />
 
-  <h2 align="center">Responsive React Movies App With API.</h2>
+  <h2>Responsive React Movies App With API.</h2>
 
 <a href="https://uhdmovies.netlify.app/"><strong>➥ Live Demo</strong></a>
 <br />
 
+</p>
+
 ## API
 
-[themoviedb](https://www.themoviedb.org/).
+This project is using an API from [themoviedb](https://www.themoviedb.org/).
 
 <br />
 
