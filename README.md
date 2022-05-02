@@ -1,4 +1,4 @@
-<p align="center">
+<div align="center">
 <img width="100px" src="./src/assets/logo.png" />
 
   <h2>Responsive React Movies App With API.</h2>
@@ -6,7 +6,7 @@
 <a href="https://uhdmovies.netlify.app/"><strong>➥ Live Demo</strong></a>
 <br />
 
-</p>
+</div>
 
 ## API
 
